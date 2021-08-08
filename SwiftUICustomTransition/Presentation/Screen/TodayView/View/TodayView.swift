@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TodayView: View {
-    var animation: Namespace.ID
+
     @EnvironmentObject var detail: DetailViewModel
     @ObservedObject private var viewModel: TodayViewModel
+    private var animation: Namespace.ID
 
-    init(animation: Namespace.ID, viewModel: TodayViewModel = TodayViewModel()) {
-        self.animation = animation
+    init(viewModel: TodayViewModel, animation: Namespace.ID) {
         self.viewModel = viewModel
+        self.animation = animation
     }
 
     var body: some View {
@@ -40,15 +41,7 @@ struct TodayView: View {
                 .padding()
 
                 ForEach(viewModel.items) { item in
-                    // CardView
-
-                    if detail.isShown {
-                        Rectangle()
-                            .fill(Color.clear)
-                            .frame(height: 320)
-                            .padding(.horizontal)
-                            .padding(.top)
-                    } else {
+                    if !detail.isShown {
                         TodayCardView(item: item, animation: animation)
                             .padding(.horizontal)
                             .padding(.top)

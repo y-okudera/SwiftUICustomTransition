@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6DC93EC26BF95A700035A36 /* SwiftUICustomTransitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC93EB26BF95A700035A36 /* SwiftUICustomTransitionApp.swift */; };
-		B6DC93EE26BF95A700035A36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC93ED26BF95A700035A36 /* ContentView.swift */; };
 		B6DC93F026BF95A700035A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DC93EF26BF95A700035A36 /* Assets.xcassets */; };
 		B6DC93F326BF95A700035A36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DC93F226BF95A700035A36 /* Preview Assets.xcassets */; };
 		B6DC93FE26BF95A700035A36 /* SwiftUICustomTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC93FD26BF95A700035A36 /* SwiftUICustomTransitionTests.swift */; };
@@ -22,6 +20,15 @@
 		B6DC942A26BFCB5E00035A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DC942926BFCB5E00035A36 /* Assets.xcassets */; };
 		B6DC942C26BFD0ED00035A36 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC942B26BFD0ED00035A36 /* TodayViewModel.swift */; };
 		B6DC942F26BFD7C900035A36 /* TodayView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC942E26BFD7C900035A36 /* TodayView+Transition.swift */; };
+		B6DC943526C00DFA00035A36 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943426C00DFA00035A36 /* TabView.swift */; };
+		B6DC943826C019A800035A36 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943726C019A800035A36 /* TabBarViewController.swift */; };
+		B6DC943C26C01B1E00035A36 /* SwiftUICompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943B26C01B1E00035A36 /* SwiftUICompatible.swift */; };
+		B6DC943E26C01CC200035A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943D26C01CC200035A36 /* AppDelegate.swift */; };
+		B6DC944026C01CEB00035A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943F26C01CEB00035A36 /* SceneDelegate.swift */; };
+		B6DC948026C01FFB00035A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DC947F26C01FFB00035A36 /* LaunchScreen.storyboard */; };
+		B6F0DD4726C038000050BF49 /* DetailView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4626C038000050BF49 /* DetailView+Transition.swift */; };
+		B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */; };
+		B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +50,6 @@
 
 /* Begin PBXFileReference section */
 		B6DC93E826BF95A700035A36 /* SwiftUICustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6DC93EB26BF95A700035A36 /* SwiftUICustomTransitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICustomTransitionApp.swift; sourceTree = "<group>"; };
-		B6DC93ED26BF95A700035A36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B6DC93EF26BF95A700035A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6DC93F226BF95A700035A36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B6DC93F426BF95A700035A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +68,15 @@
 		B6DC942926BFCB5E00035A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6DC942B26BFD0ED00035A36 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		B6DC942E26BFD7C900035A36 /* TodayView+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayView+Transition.swift"; sourceTree = "<group>"; };
+		B6DC943426C00DFA00035A36 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		B6DC943726C019A800035A36 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B6DC943B26C01B1E00035A36 /* SwiftUICompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICompatible.swift; sourceTree = "<group>"; };
+		B6DC943D26C01CC200035A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6DC943F26C01CEB00035A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B6DC947F26C01FFB00035A36 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6F0DD4626C038000050BF49 /* DetailView+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+Transition.swift"; sourceTree = "<group>"; };
+		B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItemTitleView.swift; sourceTree = "<group>"; };
+		B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItemImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +162,9 @@
 		B6DC941626BF972400035A36 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B6DC942826BFCB2B00035A36 /* Screen */,
 				B6DC942726BFCB2000035A36 /* Resources */,
+				B6DC942826BFCB2B00035A36 /* Screen */,
+				B6DC943926C01AFA00035A36 /* Utility */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -157,7 +172,8 @@
 		B6DC942326BFB4AF00035A36 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				B6DC941726BF973100035A36 /* TabBar.swift */,
+				B6F0DD4026C024540050BF49 /* View */,
+				B6DC943626C0198F00035A36 /* ViewController */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -175,6 +191,7 @@
 		B6DC942526BFB4CB00035A36 /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0DD4526C037EE0050BF49 /* Transition */,
 				B6DC943226BFFC0800035A36 /* View */,
 				B6DC943326BFFC1000035A36 /* ViewModel */,
 			);
@@ -184,9 +201,11 @@
 		B6DC942626BFC89700035A36 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B6DC943D26C01CC200035A36 /* AppDelegate.swift */,
 				B6DC942926BFCB5E00035A36 /* Assets.xcassets */,
 				B6DC93F426BF95A700035A36 /* Info.plist */,
-				B6DC93EB26BF95A700035A36 /* SwiftUICustomTransitionApp.swift */,
+				B6DC947F26C01FFB00035A36 /* LaunchScreen.storyboard */,
+				B6DC943F26C01CEB00035A36 /* SceneDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -203,7 +222,6 @@
 		B6DC942826BFCB2B00035A36 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				B6DC93ED26BF95A700035A36 /* ContentView.swift */,
 				B6DC942526BFB4CB00035A36 /* DetailView */,
 				B6DC942326BFB4AF00035A36 /* TabBar */,
 				B6DC942426BFB4BB00035A36 /* TodayView */,
@@ -251,6 +269,81 @@
 				B6DC941F26BF987900035A36 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6DC943626C0198F00035A36 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B6DC943726C019A800035A36 /* TabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B6DC943926C01AFA00035A36 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B6DC943A26C01B1000035A36 /* SwiftUICompatible */,
+				B6F0DD4826C03BED0050BF49 /* View */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B6DC943A26C01B1000035A36 /* SwiftUICompatible */ = {
+			isa = PBXGroup;
+			children = (
+				B6DC943B26C01B1E00035A36 /* SwiftUICompatible.swift */,
+			);
+			path = SwiftUICompatible;
+			sourceTree = "<group>";
+		};
+		B6F0DD4026C024540050BF49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD4426C032F70050BF49 /* Components */,
+				B6DC941726BF973100035A36 /* TabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6F0DD4426C032F70050BF49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B6DC943426C00DFA00035A36 /* TabView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B6F0DD4526C037EE0050BF49 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD4626C038000050BF49 /* DetailView+Transition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		B6F0DD4826C03BED0050BF49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD4C26C03F920050BF49 /* TodayItemImageView */,
+				B6F0DD4926C03C200050BF49 /* TodayItemTitleView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6F0DD4926C03C200050BF49 /* TodayItemTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */,
+			);
+			path = TodayItemTitleView;
+			sourceTree = "<group>";
+		};
+		B6F0DD4C26C03F920050BF49 /* TodayItemImageView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */,
+			);
+			path = TodayItemImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +452,7 @@
 				B6DC93F326BF95A700035A36 /* Preview Assets.xcassets in Resources */,
 				B6DC942A26BFCB5E00035A36 /* Assets.xcassets in Resources */,
 				B6DC93F026BF95A700035A36 /* Assets.xcassets in Resources */,
+				B6DC948026C01FFB00035A36 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,15 +477,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */,
+				B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */,
 				B6DC941826BF973100035A36 /* TabBar.swift in Sources */,
+				B6DC943C26C01B1E00035A36 /* SwiftUICompatible.swift in Sources */,
 				B6DC942F26BFD7C900035A36 /* TodayView+Transition.swift in Sources */,
 				B6DC941C26BF985200035A36 /* TodayCardView.swift in Sources */,
+				B6DC943E26C01CC200035A36 /* AppDelegate.swift in Sources */,
+				B6DC944026C01CEB00035A36 /* SceneDelegate.swift in Sources */,
 				B6DC942226BF988800035A36 /* TodayItem.swift in Sources */,
+				B6DC943826C019A800035A36 /* TabBarViewController.swift in Sources */,
 				B6DC942026BF987900035A36 /* DetailViewModel.swift in Sources */,
 				B6DC941E26BF986400035A36 /* DetailView.swift in Sources */,
-				B6DC93EE26BF95A700035A36 /* ContentView.swift in Sources */,
-				B6DC93EC26BF95A700035A36 /* SwiftUICustomTransitionApp.swift in Sources */,
+				B6DC943526C00DFA00035A36 /* TabView.swift in Sources */,
 				B6DC941A26BF983F00035A36 /* TodayView.swift in Sources */,
+				B6F0DD4726C038000050BF49 /* DetailView+Transition.swift in Sources */,
 				B6DC942C26BFD0ED00035A36 /* TodayViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

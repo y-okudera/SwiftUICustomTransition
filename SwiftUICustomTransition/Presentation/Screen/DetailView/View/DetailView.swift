@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct DetailView: View {
-    @ObservedObject private var viewModel: DetailViewModel
-    var animation: Namespace.ID
+
+    @ObservedObject var viewModel: DetailViewModel
+    private var animation: Namespace.ID
 
     @State var scale = CGFloat(1)
 
@@ -20,19 +21,14 @@ struct DetailView: View {
 
     var body: some View {
         ScrollView {
-
             VStack {
-
                 GeometryReader { reader in
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
 
-                        Image(viewModel.selectedItem.contentImage)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .matchedGeometryEffect(id: "image" + viewModel.selectedItem.id, in: animation)
+                        TodayItemImageView(item: viewModel.selectedItem, animation: animation)
                             .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
 
-                        HStack {
+                        HStack(alignment: .top) {
 
                             Text(viewModel.selectedItem.overlay)
                                 .font(.title)
@@ -42,62 +38,29 @@ struct DetailView: View {
                             Spacer(minLength: 0)
 
                             Button(action: {
-                                withAnimation(.spring()) {
-                                    viewModel.hide()
-                                }
+                                hide()
                             }) {
                                 Image(systemName: "xmark")
                                     .foregroundColor(.black.opacity(0.7))
                                     .padding()
                                     .background(Color.white.opacity(0.8))
+                                    .frame(width: 35, height: 35)
                                     .clipShape(Circle())
                             }
                         }
                         .padding(.horizontal)
-                        // since we ignore top area
                         .padding(.top, UIApplication.shared.windows.first!.safeAreaInsets.top + 10)
                     }
                     .offset(y: (reader.frame(in: .global).minY > 0 && scale == 1) ? -reader.frame(in: .global).minY : 0)
-                    .gesture(DragGesture(minimumDistance: 0).onChanged(onChanged(value:)).onEnded(onEnded(value:)))
+                    .gesture(
+                        DragGesture(minimumDistance: 0)
+                            .onChanged(onChanged(value:))
+                            .onEnded(onEnded(value:))
+                    )
                 }
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
 
-                HStack {
-                    Image(viewModel.selectedItem.logo)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 65, height: 65)
-                        .cornerRadius(15)
-
-                    VStack(alignment: .leading, spacing: 6) {
-
-                        Text(viewModel.selectedItem.title)
-                            .fontWeight(.bold)
-
-                        Text(viewModel.selectedItem.category)
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
-
-                    Spacer(minLength: 0)
-
-                    VStack {
-                        Button(action: {}) {
-                            Text("GET")
-                                .fontWeight(.bold)
-                                .padding(.vertical, 10)
-                                .padding(.horizontal, 25)
-                                .background(Color.primary.opacity(0.1))
-                                .clipShape(Capsule())
-                        }
-
-                        Text("In App Purchases")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
-                }
-                .matchedGeometryEffect(id: "content" + viewModel.selectedItem.id, in: animation)
-                .padding()
+                TodayItemTitleView(item: viewModel.selectedItem, animation: animation)
 
                 Text(viewModel.selectedItem.text)
                     .lineLimit(nil)
@@ -133,11 +96,6 @@ struct DetailView: View {
     }
 
     func onEnded(value: DragGesture.Value) {
-        withAnimation(.spring()) {
-            if scale < 0.9 {
-                viewModel.hide()
-            }
-            scale = 1
-        }
+        hideIfNeeded()
     }
 }

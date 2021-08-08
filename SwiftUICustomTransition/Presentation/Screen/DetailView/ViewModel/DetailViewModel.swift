@@ -15,15 +15,12 @@ final class DetailViewModel: ObservableObject {
 // MARK: - Inputs
 extension DetailViewModel {
 
-    func setItem(_ item: TodayItem) {
-        self.selectedItem = item
-    }
-
-    func show() {
-        self.isShown = true
+    func show(item: TodayItem) {
+        selectedItem = item
+        isShown = true
     }
 
     func hide() {
-        self.isShown = false
+        isShown = false
     }
 }

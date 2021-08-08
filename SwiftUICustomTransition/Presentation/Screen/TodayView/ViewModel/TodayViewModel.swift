@@ -27,8 +27,8 @@ final class TodayViewModel: ObservableObject {
 extension TodayViewModel {
 
     func onAppear() {
-        self.todayFormat()
-        self.items = TodayItem.items
+        todayFormat()
+        items = TodayItem.items
     }
 
     func didTapItem(_ item: TodayItem) {
@@ -48,6 +48,6 @@ private extension TodayViewModel {
 
     func todayFormat() {
         let now = Date()
-        self.todayText = Self.todayFormatter.string(from: now)
+        todayText = Self.todayFormatter.string(from: now)
     }
 }

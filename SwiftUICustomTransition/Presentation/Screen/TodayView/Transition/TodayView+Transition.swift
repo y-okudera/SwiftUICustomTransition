@@ -18,8 +18,7 @@ extension TodayView {
         switch transitionItem {
         case .detail(let item):
             withAnimation(.spring()) {
-                detail.setItem(item)
-                detail.show()
+                detail.show(item: item)
             }
         case .none:
             break
