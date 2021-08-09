@@ -22,7 +22,7 @@ struct DetailView: View {
     var body: some View {
         ScrollView {
             VStack {
-                GeometryReader { reader in
+                GeometryReader { geometryProxy in
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
 
                         TodayItemImageView(item: viewModel.selectedItem, animation: animation)
@@ -51,7 +51,7 @@ struct DetailView: View {
                         .padding(.horizontal)
                         .padding(.top, UIApplication.shared.windows.first!.safeAreaInsets.top + 10)
                     }
-                    .offset(y: (reader.frame(in: .global).minY > 0 && scale == 1) ? -reader.frame(in: .global).minY : 0)
+                    .offset(y: (geometryProxy.frame(in: .global).minY > 0 && scale == 1) ? -geometryProxy.frame(in: .global).minY : 0)
                     .gesture(
                         DragGesture(minimumDistance: 0)
                             .onChanged(onChanged(value:))
