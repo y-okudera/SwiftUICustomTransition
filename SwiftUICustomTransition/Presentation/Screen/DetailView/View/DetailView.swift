@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
 
+    @Environment(\.viewController) var viewControllerHolder: UIViewController?
     @ObservedObject var viewModel: DetailViewModel
     private var animation: Namespace.ID
 
@@ -26,7 +27,7 @@ struct DetailView: View {
                     ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
 
                         TodayItemImageView(item: viewModel.selectedItem, animation: animation)
-                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
 
                         HStack(alignment: .top) {
 
@@ -37,16 +38,7 @@ struct DetailView: View {
 
                             Spacer(minLength: 0)
 
-                            Button(action: {
-                                hide()
-                            }) {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.black.opacity(0.7))
-                                    .padding()
-                                    .background(Color.white.opacity(0.8))
-                                    .frame(width: 35, height: 35)
-                                    .clipShape(Circle())
-                            }
+                            CloseButton { viewModel.didTapClose() }
                         }
                         .padding(.horizontal)
                         .padding(.top, UIApplication.shared.windows.first!.safeAreaInsets.top + 10)
@@ -58,7 +50,7 @@ struct DetailView: View {
                             .onEnded(onEnded(value:))
                     )
                 }
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2.5)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
 
                 TodayItemTitleView(item: viewModel.selectedItem, animation: animation)
 
@@ -67,25 +59,15 @@ struct DetailView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding()
 
-                Button(action: {}) {
-                    Label(title: {
-                        Text("Share")
-                            .foregroundColor(.primary)
-                    }) {
-                        Image(systemName: "square.and.arrow.up.fill")
-                            .font(.title2)
-                            .foregroundColor(.primary)
-                    }
-                    .padding(.vertical, 10)
-                    .padding(.horizontal, 25)
-                    .background(Color.primary.opacity(0.1))
-                    .cornerRadius(10)
+                ShareButton {
+                    viewModel.didTapShare()
                 }
                 .padding()
             }
         }
         .scaleEffect(scale)
         .ignoresSafeArea(.all, edges: .top)
+        .onReceive(viewModel.$transitionItem, perform: transition(to:))
     }
 
     func onChanged(value: DragGesture.Value) {
@@ -96,6 +78,6 @@ struct DetailView: View {
     }
 
     func onEnded(value: DragGesture.Value) {
-        hideIfNeeded()
+        viewModel.didEndDragging()
     }
 }

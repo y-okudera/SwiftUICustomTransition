@@ -8,19 +8,38 @@
 import SwiftUI
 
 extension DetailView {
-
-    func hide() {
-        withAnimation(.spring()) {
-            viewModel.hide()
-        }
+    enum TransitionItem {
+        case shareSheet
+        case hide
+        case hideIfBelowThreshold
     }
+}
 
-    func hideIfNeeded() {
-        withAnimation(.spring()) {
-            if scale < 0.9 {
+extension DetailView {
+
+    func transition(to transitionItem: TransitionItem?) {
+        switch transitionItem {
+        case .shareSheet:
+            viewControllerHolder?.present {
+                SlideOverCard {
+                    ShareSheet(
+                        activityItems: [ShareActivityItemSource(shareText: viewModel.selectedItem.title, shareImage: UIImage(named: viewModel.selectedItem.logo)!)]
+                    )
+                }
+            }
+        case .hide:
+            withAnimation(.spring()) {
                 viewModel.hide()
             }
-            scale = 1
+        case .hideIfBelowThreshold:
+            withAnimation(.spring()) {
+                if scale < 0.9 {
+                    viewModel.hide()
+                }
+                scale = 1
+            }
+        case .none:
+            break
         }
     }
 }

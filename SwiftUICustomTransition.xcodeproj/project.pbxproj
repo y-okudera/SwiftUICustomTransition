@@ -29,6 +29,12 @@
 		B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */; };
 		B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */; };
 		B6F0DD5B26C12E280050BF49 /* TouchGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD5A26C12E280050BF49 /* TouchGestureView.swift */; };
+		B6F0DD5F26C185AB0050BF49 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD5E26C185AB0050BF49 /* CloseButton.swift */; };
+		B6F0DD6226C187480050BF49 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD6126C187480050BF49 /* ShareSheet.swift */; };
+		B6F0DD6426C1895C0050BF49 /* SlideOverCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD6326C1895C0050BF49 /* SlideOverCard.swift */; };
+		B6F0DD6D26C199BC0050BF49 /* ViewControllerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD6C26C199BC0050BF49 /* ViewControllerHolder.swift */; };
+		B6F0DD7026C19E100050BF49 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD6F26C19E100050BF49 /* ShareButton.swift */; };
+		B6F0DD7226C1ABB00050BF49 /* ShareActivityItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD7126C1ABB00050BF49 /* ShareActivityItemSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItemTitleView.swift; sourceTree = "<group>"; };
 		B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItemImageView.swift; sourceTree = "<group>"; };
 		B6F0DD5A26C12E280050BF49 /* TouchGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchGestureView.swift; sourceTree = "<group>"; };
+		B6F0DD5E26C185AB0050BF49 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		B6F0DD6126C187480050BF49 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		B6F0DD6326C1895C0050BF49 /* SlideOverCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCard.swift; sourceTree = "<group>"; };
+		B6F0DD6C26C199BC0050BF49 /* ViewControllerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHolder.swift; sourceTree = "<group>"; };
+		B6F0DD6F26C19E100050BF49 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		B6F0DD7126C1ABB00050BF49 /* ShareActivityItemSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityItemSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +268,7 @@
 		B6DC943226BFFC0800035A36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0DD5D26C1859B0050BF49 /* Components */,
 				B6DC941D26BF986400035A36 /* DetailView.swift */,
 			);
 			path = View;
@@ -272,6 +285,7 @@
 		B6DC943926C01AFA00035A36 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0DD6B26C199B30050BF49 /* ViewControllerHolder */,
 				B6DC943A26C01B1000035A36 /* SwiftUICompatible */,
 				B6F0DD4826C03BED0050BF49 /* View */,
 			);
@@ -314,6 +328,8 @@
 		B6F0DD4826C03BED0050BF49 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0DD6E26C19DDC0050BF49 /* ShareSheet */,
+				B6F0DD6726C18E070050BF49 /* SlideOverCard */,
 				B6F0DD4C26C03F920050BF49 /* TodayItemImageView */,
 				B6F0DD4926C03C200050BF49 /* TodayItemTitleView */,
 				B6F0DD5926C12E190050BF49 /* TouchGestureView */,
@@ -352,6 +368,40 @@
 				B6DC942126BF988800035A36 /* TodayItem.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B6F0DD5D26C1859B0050BF49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD5E26C185AB0050BF49 /* CloseButton.swift */,
+				B6F0DD6F26C19E100050BF49 /* ShareButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B6F0DD6726C18E070050BF49 /* SlideOverCard */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD6326C1895C0050BF49 /* SlideOverCard.swift */,
+			);
+			path = SlideOverCard;
+			sourceTree = "<group>";
+		};
+		B6F0DD6B26C199B30050BF49 /* ViewControllerHolder */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD6C26C199BC0050BF49 /* ViewControllerHolder.swift */,
+			);
+			path = ViewControllerHolder;
+			sourceTree = "<group>";
+		};
+		B6F0DD6E26C19DDC0050BF49 /* ShareSheet */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD6126C187480050BF49 /* ShareSheet.swift */,
+				B6F0DD7126C1ABB00050BF49 /* ShareActivityItemSource.swift */,
+			);
+			path = ShareSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,15 +535,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6F0DD7026C19E100050BF49 /* ShareButton.swift in Sources */,
 				B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */,
+				B6F0DD6426C1895C0050BF49 /* SlideOverCard.swift in Sources */,
 				B6F0DD5B26C12E280050BF49 /* TouchGestureView.swift in Sources */,
 				B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */,
 				B6DC941826BF973100035A36 /* TabBarView.swift in Sources */,
 				B6DC943C26C01B1E00035A36 /* SwiftUICompatible.swift in Sources */,
 				B6DC942F26BFD7C900035A36 /* TodayView+Transition.swift in Sources */,
+				B6F0DD5F26C185AB0050BF49 /* CloseButton.swift in Sources */,
+				B6F0DD6226C187480050BF49 /* ShareSheet.swift in Sources */,
 				B6DC941C26BF985200035A36 /* TodayCardView.swift in Sources */,
 				B6DC943E26C01CC200035A36 /* AppDelegate.swift in Sources */,
+				B6F0DD6D26C199BC0050BF49 /* ViewControllerHolder.swift in Sources */,
 				B6DC944026C01CEB00035A36 /* SceneDelegate.swift in Sources */,
+				B6F0DD7226C1ABB00050BF49 /* ShareActivityItemSource.swift in Sources */,
 				B6DC942226BF988800035A36 /* TodayItem.swift in Sources */,
 				B6DC942026BF987900035A36 /* DetailViewModel.swift in Sources */,
 				B6DC941E26BF986400035A36 /* DetailView.swift in Sources */,
