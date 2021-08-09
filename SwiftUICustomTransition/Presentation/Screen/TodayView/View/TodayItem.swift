@@ -37,5 +37,13 @@ extension TodayItem {
             contentImage: "back2",
             logo: "logo2"
         ),
+        TodayItem(
+            title: "Telep",
+            category: "Telephone",
+            overlay: "CONNECTING THE PHONE",
+            text: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.",
+            contentImage: "back3",
+            logo: "logo3"
+        ),
     ]
 }
