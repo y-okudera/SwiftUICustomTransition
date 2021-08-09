@@ -10,13 +10,12 @@ import SwiftUI
 struct TodayView: View {
 
     @EnvironmentObject var detail: DetailViewModel
-    @ObservedObject private var viewModel: TodayViewModel
+    @StateObject private var viewModel = TodayViewModel()
     @State private var tap: (isTapped: Bool, itemId: String?) = (isTapped: false, itemId: nil)
 
     private var animation: Namespace.ID
 
-    init(viewModel: TodayViewModel, animation: Namespace.ID) {
-        self.viewModel = viewModel
+    init(animation: Namespace.ID) {
         self.animation = animation
     }
 

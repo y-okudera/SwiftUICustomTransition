@@ -16,8 +16,8 @@ struct TabBarView: View {
         ZStack {
 
             TabView(selection: $selectedIndex) {
-                TodayView(viewModel: TodayViewModel(), animation: animation)
                     .environmentObject(detail)
+                TodayView(animation: animation)
                     .tabItem("Today", image: UIImage(named: "today"))
                 Text("Games")
                     .tabItem("Games", image: UIImage(named: "games"))
