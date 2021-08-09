@@ -11,7 +11,7 @@
 		B6DC93F326BF95A700035A36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6DC93F226BF95A700035A36 /* Preview Assets.xcassets */; };
 		B6DC93FE26BF95A700035A36 /* SwiftUICustomTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC93FD26BF95A700035A36 /* SwiftUICustomTransitionTests.swift */; };
 		B6DC940926BF95A700035A36 /* SwiftUICustomTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC940826BF95A700035A36 /* SwiftUICustomTransitionUITests.swift */; };
-		B6DC941826BF973100035A36 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC941726BF973100035A36 /* TabBar.swift */; };
+		B6DC941826BF973100035A36 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC941726BF973100035A36 /* TabBarView.swift */; };
 		B6DC941A26BF983F00035A36 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC941926BF983F00035A36 /* TodayView.swift */; };
 		B6DC941C26BF985200035A36 /* TodayCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC941B26BF985200035A36 /* TodayCardView.swift */; };
 		B6DC941E26BF986400035A36 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC941D26BF986400035A36 /* DetailView.swift */; };
@@ -21,7 +21,6 @@
 		B6DC942C26BFD0ED00035A36 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC942B26BFD0ED00035A36 /* TodayViewModel.swift */; };
 		B6DC942F26BFD7C900035A36 /* TodayView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC942E26BFD7C900035A36 /* TodayView+Transition.swift */; };
 		B6DC943526C00DFA00035A36 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943426C00DFA00035A36 /* TabView.swift */; };
-		B6DC943826C019A800035A36 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943726C019A800035A36 /* TabBarViewController.swift */; };
 		B6DC943C26C01B1E00035A36 /* SwiftUICompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943B26C01B1E00035A36 /* SwiftUICompatible.swift */; };
 		B6DC943E26C01CC200035A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943D26C01CC200035A36 /* AppDelegate.swift */; };
 		B6DC944026C01CEB00035A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DC943F26C01CEB00035A36 /* SceneDelegate.swift */; };
@@ -60,7 +59,7 @@
 		B6DC940426BF95A700035A36 /* SwiftUICustomTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUICustomTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6DC940826BF95A700035A36 /* SwiftUICustomTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICustomTransitionUITests.swift; sourceTree = "<group>"; };
 		B6DC940A26BF95A700035A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6DC941726BF973100035A36 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		B6DC941726BF973100035A36 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		B6DC941926BF983F00035A36 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
 		B6DC941B26BF985200035A36 /* TodayCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCardView.swift; sourceTree = "<group>"; };
 		B6DC941D26BF986400035A36 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -70,7 +69,6 @@
 		B6DC942B26BFD0ED00035A36 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		B6DC942E26BFD7C900035A36 /* TodayView+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayView+Transition.swift"; sourceTree = "<group>"; };
 		B6DC943426C00DFA00035A36 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
-		B6DC943726C019A800035A36 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		B6DC943B26C01B1E00035A36 /* SwiftUICompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICompatible.swift; sourceTree = "<group>"; };
 		B6DC943D26C01CC200035A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6DC943F26C01CEB00035A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,13 +169,12 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		B6DC942326BFB4AF00035A36 /* TabBar */ = {
+		B6DC942326BFB4AF00035A36 /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
 				B6F0DD4026C024540050BF49 /* View */,
-				B6DC943626C0198F00035A36 /* ViewController */,
 			);
-			path = TabBar;
+			path = TabBarView;
 			sourceTree = "<group>";
 		};
 		B6DC942426BFB4BB00035A36 /* TodayView */ = {
@@ -225,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				B6DC942526BFB4CB00035A36 /* DetailView */,
-				B6DC942326BFB4AF00035A36 /* TabBar */,
+				B6DC942326BFB4AF00035A36 /* TabBarView */,
 				B6DC942426BFB4BB00035A36 /* TodayView */,
 			);
 			path = Screen;
@@ -273,14 +270,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		B6DC943626C0198F00035A36 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B6DC943726C019A800035A36 /* TabBarViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		B6DC943926C01AFA00035A36 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				B6F0DD4426C032F70050BF49 /* Components */,
-				B6DC941726BF973100035A36 /* TabBar.swift */,
+				B6DC941726BF973100035A36 /* TabBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,9 +315,9 @@
 		B6F0DD4826C03BED0050BF49 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6F0DD5926C12E190050BF49 /* TouchGestureView */,
 				B6F0DD4C26C03F920050BF49 /* TodayItemImageView */,
 				B6F0DD4926C03C200050BF49 /* TodayItemTitleView */,
+				B6F0DD5926C12E190050BF49 /* TouchGestureView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,14 +480,13 @@
 				B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */,
 				B6F0DD5B26C12E280050BF49 /* TouchGestureView.swift in Sources */,
 				B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */,
-				B6DC941826BF973100035A36 /* TabBar.swift in Sources */,
+				B6DC941826BF973100035A36 /* TabBarView.swift in Sources */,
 				B6DC943C26C01B1E00035A36 /* SwiftUICompatible.swift in Sources */,
 				B6DC942F26BFD7C900035A36 /* TodayView+Transition.swift in Sources */,
 				B6DC941C26BF985200035A36 /* TodayCardView.swift in Sources */,
 				B6DC943E26C01CC200035A36 /* AppDelegate.swift in Sources */,
 				B6DC944026C01CEB00035A36 /* SceneDelegate.swift in Sources */,
 				B6DC942226BF988800035A36 /* TodayItem.swift in Sources */,
-				B6DC943826C019A800035A36 /* TabBarViewController.swift in Sources */,
 				B6DC942026BF987900035A36 /* DetailViewModel.swift in Sources */,
 				B6DC941E26BF986400035A36 /* DetailView.swift in Sources */,
 				B6DC943526C00DFA00035A36 /* TabView.swift in Sources */,

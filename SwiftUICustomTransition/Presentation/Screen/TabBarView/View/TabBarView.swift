@@ -1,5 +1,5 @@
 //
-//  TabBar.swift
+//  TabBarView.swift
 //  SwiftUICustomTransition
 //
 //  Created by Yuki Okudera on 2021/08/08.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabBar: View {
+struct TabBarView: View {
     @Namespace var animation
     @StateObject var detail = DetailViewModel()
     @State private var selectedIndex: Int = 0
@@ -36,8 +36,8 @@ struct TabBar: View {
     }
 }
 
-struct TabBar_Previews: PreviewProvider {
+struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBar()
+        TabBarView()
     }
 }
