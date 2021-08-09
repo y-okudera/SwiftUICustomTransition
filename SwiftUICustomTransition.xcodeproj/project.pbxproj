@@ -239,8 +239,7 @@
 		B6DC943026BFFBE000035A36 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6DC941B26BF985200035A36 /* TodayCardView.swift */,
-				B6DC942126BF988800035A36 /* TodayItem.swift */,
+				B6F0DD5C26C1853D0050BF49 /* Components */,
 				B6DC941926BF983F00035A36 /* TodayView.swift */,
 			);
 			path = View;
@@ -344,6 +343,15 @@
 				B6F0DD5A26C12E280050BF49 /* TouchGestureView.swift */,
 			);
 			path = TouchGestureView;
+			sourceTree = "<group>";
+		};
+		B6F0DD5C26C1853D0050BF49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B6DC941B26BF985200035A36 /* TodayCardView.swift */,
+				B6DC942126BF988800035A36 /* TodayItem.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
