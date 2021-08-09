@@ -53,17 +53,27 @@ struct TodayView: View {
                         TodayCardView(item: item, animation: animation)
                             .padding(.horizontal)
                             .padding(.top)
-                            .scaleEffect(isTappedTodayItem(targetItem: item) ? 0.9 : 1.0)
-                            .animation(.spring(response: 0.4, dampingFraction: 0.6))
-                            .onTapGesture {
-                                tap.itemId = item.id
-                                tap.isTapped = true
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                    tap.isTapped = false
-                                    viewModel.didTapItem(item)
+                            .shadow(color: .black.opacity(0.4), radius: 10, x: 0, y: 10)
+                            .scaleEffect(isTappedTodayItem(targetItem: item) ? 0.95 : 1.0)
+                            .overlay(
+                                TouchGestureView {
+                                    // touch down
+                                    tap = (isTapped: true, itemId: item.id)
+                                } touchMovedCallback: { distance in
+                                    // touch moved
+                                    if distance > 20 {
+                                        tap.isTapped = false
+                                    }
+                                } touchUpCallback: {
+                                    // touch up
+                                    if tap.isTapped {
+                                        tap.isTapped = false
+                                        viewModel.didTapItem(item)
+                                    }
                                 }
-                            }
+                            )
                     }
+                    Spacer(minLength: 16)
                 }
             }
             .padding(.bottom)

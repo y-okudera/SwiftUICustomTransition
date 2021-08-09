@@ -29,6 +29,7 @@
 		B6F0DD4726C038000050BF49 /* DetailView+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4626C038000050BF49 /* DetailView+Transition.swift */; };
 		B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */; };
 		B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */; };
+		B6F0DD5B26C12E280050BF49 /* TouchGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0DD5A26C12E280050BF49 /* TouchGestureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		B6F0DD4626C038000050BF49 /* DetailView+Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailView+Transition.swift"; sourceTree = "<group>"; };
 		B6F0DD4A26C03C310050BF49 /* TodayItemTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItemTitleView.swift; sourceTree = "<group>"; };
 		B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItemImageView.swift; sourceTree = "<group>"; };
+		B6F0DD5A26C12E280050BF49 /* TouchGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchGestureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +326,7 @@
 		B6F0DD4826C03BED0050BF49 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B6F0DD5926C12E190050BF49 /* TouchGestureView */,
 				B6F0DD4C26C03F920050BF49 /* TodayItemImageView */,
 				B6F0DD4926C03C200050BF49 /* TodayItemTitleView */,
 			);
@@ -344,6 +347,14 @@
 				B6F0DD4D26C03FA50050BF49 /* TodayItemImageView.swift */,
 			);
 			path = TodayItemImageView;
+			sourceTree = "<group>";
+		};
+		B6F0DD5926C12E190050BF49 /* TouchGestureView */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0DD5A26C12E280050BF49 /* TouchGestureView.swift */,
+			);
+			path = TouchGestureView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6F0DD4B26C03C310050BF49 /* TodayItemTitleView.swift in Sources */,
+				B6F0DD5B26C12E280050BF49 /* TouchGestureView.swift in Sources */,
 				B6F0DD4E26C03FA50050BF49 /* TodayItemImageView.swift in Sources */,
 				B6DC941826BF973100035A36 /* TabBar.swift in Sources */,
 				B6DC943C26C01B1E00035A36 /* SwiftUICompatible.swift in Sources */,
