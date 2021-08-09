@@ -41,7 +41,13 @@ struct TodayView: View {
                 .padding()
 
                 ForEach(viewModel.items) { item in
-                    if !detail.isShown {
+                    if detail.isShown {
+                        Rectangle()
+                            .fill(Color.clear)
+                            .frame(height: 320)
+                            .padding(.horizontal)
+                            .padding(.top)
+                    } else {
                         TodayCardView(item: item, animation: animation)
                             .padding(.horizontal)
                             .padding(.top)

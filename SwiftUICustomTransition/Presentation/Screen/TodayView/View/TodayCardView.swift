@@ -24,6 +24,8 @@ struct TodayCardView: View {
                 .frame(width: UIScreen.main.bounds.width - 30)
 
             TodayItemTitleView(item: item, animation: animation)
+            
+            Spacer(minLength: 16)
         }
         .frame(height: 320)
         .background(color == .dark ? Color.black : Color.white)
