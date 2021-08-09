@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayView: View {
 
-    @EnvironmentObject var detail: DetailViewModel
+    @EnvironmentObject var detailObject: DetailViewModel
     @StateObject private var viewModel = TodayViewModel()
     @State private var tap: (isTapped: Bool, itemId: String?) = (isTapped: false, itemId: nil)
 
@@ -42,7 +42,7 @@ struct TodayView: View {
                 .padding()
 
                 ForEach(viewModel.items) { item in
-                    if detail.isShown {
+                    if detailObject.isShown {
                         Rectangle()
                             .fill(Color.clear)
                             .frame(height: 320)
