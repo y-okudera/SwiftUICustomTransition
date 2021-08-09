@@ -8,7 +8,9 @@
 import SwiftUI
 
 final class DetailViewModel: ObservableObject {
-    @Published private(set) var selectedItem = TodayItem(title: "", category: "", overlay: "", text: "", contentImage: "", logo: "")
+
+    // MARK: - Outputs
+    @Published private(set) var selectedItem = TodayItem()
     @Published private(set) var isShown = false
 }
 

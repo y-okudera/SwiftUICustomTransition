@@ -9,13 +9,31 @@ import SwiftUI
 
 struct TodayItem: Identifiable {
 
-    var id = UUID().uuidString
+    let id = UUID().uuidString
     var title: String
     var category: String
     var overlay: String
     var text: String
     var contentImage: String
     var logo: String
+
+    init(title: String, category: String, overlay: String, text: String, contentImage: String, logo: String) {
+        self.title = title
+        self.category = category
+        self.overlay = overlay
+        self.text = text
+        self.contentImage = contentImage
+        self.logo = logo
+    }
+
+    init() {
+        self.title = ""
+        self.category = ""
+        self.overlay = ""
+        self.text = ""
+        self.contentImage = ""
+        self.logo = ""
+    }
 }
 
 // MARK: - Dummy items
