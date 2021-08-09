@@ -11,6 +11,8 @@ struct TodayView: View {
 
     @EnvironmentObject var detail: DetailViewModel
     @ObservedObject private var viewModel: TodayViewModel
+    @State private var tap: (isTapped: Bool, itemId: String?) = (isTapped: false, itemId: nil)
+
     private var animation: Namespace.ID
 
     init(viewModel: TodayViewModel, animation: Namespace.ID) {
@@ -51,8 +53,15 @@ struct TodayView: View {
                         TodayCardView(item: item, animation: animation)
                             .padding(.horizontal)
                             .padding(.top)
+                            .scaleEffect(isTappedTodayItem(targetItem: item) ? 0.9 : 1.0)
+                            .animation(.spring(response: 0.4, dampingFraction: 0.6))
                             .onTapGesture {
-                                viewModel.didTapItem(item)
+                                tap.itemId = item.id
+                                tap.isTapped = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                    tap.isTapped = false
+                                    viewModel.didTapItem(item)
+                                }
                             }
                     }
                 }
@@ -62,5 +71,9 @@ struct TodayView: View {
         .background(Color.primary.opacity(0.06).ignoresSafeArea())
         .onAppear(perform: viewModel.onAppear)
         .onReceive(viewModel.$transitionItem, perform: transition(to:))
+    }
+
+    private func isTappedTodayItem(targetItem: TodayItem) -> Bool {
+        return tap.isTapped && tap.itemId == targetItem.id
     }
 }
