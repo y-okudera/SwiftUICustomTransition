@@ -11,10 +11,12 @@ struct TodayItemTitleView: View {
 
     private var item: TodayItem
     private var animation: Namespace.ID
+    private var isSource: Bool
 
-    init(item: TodayItem, animation: Namespace.ID) {
+    init(item: TodayItem, animation: Namespace.ID, isSource: Bool = true) {
         self.item = item
         self.animation = animation
+        self.isSource = isSource
     }
     
     var body: some View {
@@ -51,7 +53,7 @@ struct TodayItemTitleView: View {
                     .foregroundColor(.gray)
             }
         }
-        .matchedGeometryEffect(id: "content" + item.id, in: animation)
+        .matchedGeometryEffect(id: "content" + item.id, in: animation, isSource: isSource)
         .padding()
     }
 }

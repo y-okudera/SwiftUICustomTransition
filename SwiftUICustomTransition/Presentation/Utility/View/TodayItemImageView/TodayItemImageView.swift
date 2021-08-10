@@ -11,17 +11,19 @@ struct TodayItemImageView: View {
 
     private var item: TodayItem
     private var animation: Namespace.ID
+    private var isSource: Bool
 
-    init(item: TodayItem, animation: Namespace.ID) {
+    init(item: TodayItem, animation: Namespace.ID, isSource: Bool = true) {
         self.item = item
         self.animation = animation
+        self.isSource = isSource
     }
 
     var body: some View {
         Image(item.contentImage)
             .resizable()
             .aspectRatio(contentMode: .fill)
-            .matchedGeometryEffect(id: "image" + item.id, in: animation)
+            .matchedGeometryEffect(id: "image" + item.id, in: animation, isSource: isSource)
     }
 }
 

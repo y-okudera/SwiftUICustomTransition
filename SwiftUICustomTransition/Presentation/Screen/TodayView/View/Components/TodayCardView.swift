@@ -20,10 +20,10 @@ struct TodayCardView: View {
 
     var body: some View {
         VStack {
-            TodayItemImageView(item: item, animation: animation)
+            TodayItemImageView(item: item, animation: animation, isSource: false)
                 .frame(width: UIScreen.main.bounds.width - 30)
 
-            TodayItemTitleView(item: item, animation: animation)
+            TodayItemTitleView(item: item, animation: animation, isSource: false)
 
             Spacer(minLength: 16)
         }
